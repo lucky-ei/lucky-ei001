@@ -1,0 +1,15 @@
+c:\users\noharaei\documents\visual studio 2015\Projects\MyClock\MyClock\bin\Debug\MyClock.exe.config
+c:\users\noharaei\documents\visual studio 2015\Projects\MyClock\MyClock\bin\Debug\MyClock.exe
+c:\users\noharaei\documents\visual studio 2015\Projects\MyClock\MyClock\bin\Debug\MyClock.pdb
+c:\users\noharaei\documents\visual studio 2015\Projects\MyClock\MyClock\obj\Debug\MyClock.csprojResolveAssemblyReference.cache
+c:\users\noharaei\documents\visual studio 2015\Projects\MyClock\MyClock\obj\Debug\MainWindow.g.cs
+c:\users\noharaei\documents\visual studio 2015\Projects\MyClock\MyClock\obj\Debug\App.g.cs
+c:\users\noharaei\documents\visual studio 2015\Projects\MyClock\MyClock\obj\Debug\MyClock_MarkupCompile.cache
+c:\users\noharaei\documents\visual studio 2015\Projects\MyClock\MyClock\obj\Debug\MyClock_MarkupCompile.lref
+c:\users\noharaei\documents\visual studio 2015\Projects\MyClock\MyClock\obj\Debug\MainWindow.baml
+c:\users\noharaei\documents\visual studio 2015\Projects\MyClock\MyClock\obj\Debug\MyClock.g.resources
+c:\users\noharaei\documents\visual studio 2015\Projects\MyClock\MyClock\obj\Debug\MyClock.Properties.Resources.resources
+c:\users\noharaei\documents\visual studio 2015\Projects\MyClock\MyClock\obj\Debug\MyClock.csproj.GenerateResource.Cache
+c:\users\noharaei\documents\visual studio 2015\Projects\MyClock\MyClock\obj\Debug\MyClock.exe
+c:\users\noharaei\documents\visual studio 2015\Projects\MyClock\MyClock\obj\Debug\MyClock.pdb
+c:\users\noharaei\documents\visual studio 2015\Projects\MyClock\MyClock\obj\Debug\GeneratedInternalTypeHelper.g.cs

@@ -1,0 +1,64 @@
+﻿<Window x:Class="MyClock.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyClock"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="500" ResizeMode="CanMinimize">
+    <Window.Resources>
+        <!-- 時計ビューモデル「ClockViewModel」の実体を「clockViewModel」という名前で>
+            リソースとしてウィンドウに持つ -->
+        <local:ClockViewModel x:Key="clockViewModel" />
+    </Window.Resources>
+    <!--Canvasのデータコンテキストとして
+        時計ビューモデルの実体であるclockViewModelを指定-->
+    <Canvas DataContext="{Binding Source={StaticResource clockViewModel}}">
+        <!--デジタル時計の表示部であるTextBlockのテキストとして、
+            データのDigitalDisplayを指定-->
+        <TextBlock x:Name="textBlock" Canvas.Left="300" TextWrapping="Wrap"
+            Text="{Binding Path=DigitalDisplay}" Canvas.Top="400" FontSize="30"/>
+
+        <!--短針（座標と線の太さ、色を指定）-->
+        <Line X1="250" Y1="260" X2="250" Y2="100" StrokeThickness="20" Stroke="Red">
+            <Line.Effect>
+                <DropShadowEffect/>
+            </Line.Effect>
+            <!--位置の変換の指定-->
+            <Line.RenderTransform>
+                <!--オブジェクトを（CenterX, CenterY）の点を中心にAngle度回転させる-->
+                <RotateTransform CenterX="250" CenterY="250" Angle="{Binding Path=HourHandAngle}" />
+            </Line.RenderTransform>
+        </Line>
+
+        <!--長針（座標と線の太さ、色を指定）-->
+        <Line X1="250" Y1="280" X2="250" Y2="60" StrokeThickness="10" Stroke="Blue">
+            <Line.Effect>
+                <DropShadowEffect/>
+            </Line.Effect>
+            <!--位置の変換の指定-->
+            <Line.RenderTransform>
+                <!--オブジェクトを（CenterX, CenterY）の点を中心にAngle度回転させる-->
+                <RotateTransform CenterX="250" CenterY="250" Angle="{Binding Path=MinuteHandAngle}" />
+            </Line.RenderTransform>
+        </Line>
+
+        <!--秒針（座標と線の太さ、色を指定）-->
+        <Line X1="250" Y1="290" X2="250" Y2="50" StrokeThickness="5" Stroke="Gray">
+            <Line.Effect>
+                <DropShadowEffect/>
+            </Line.Effect>
+            <!--位置の変換の指定-->
+            <Line.RenderTransform>
+                <!--オブジェクトを（CenterX, CenterY）の点を中心にAngle度回転させる-->
+                <RotateTransform CenterX="250" CenterY="250" Angle="{Binding Path=SecondHandAngle}" />
+            </Line.RenderTransform>
+        </Line>
+        <!--針の付け根の丸（座標と大きさ、塗りつぶしの色を指定）-->
+        <Ellipse Canvas.Top="245" Canvas.Left="245" Width="10" Height="10" Fill="Black" >
+            <Ellipse.Effect>
+                <DropShadowEffect/>
+            </Ellipse.Effect>
+        </Ellipse>
+    </Canvas>
+</Window>
