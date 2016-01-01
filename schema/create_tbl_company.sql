@@ -1,4 +1,4 @@
-﻿CREATE TABLE [dbo].[Table]
+﻿CREATE TABLE [dbo].[tbl_company]
 (
 	[companyID] INT NOT NULL , 
     [company_name] NVARCHAR(100) NOT NULL, 
